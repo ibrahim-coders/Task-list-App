@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style type="text/tailwindcss">
+    @layer components {
+    .tasks {
+      @apply p-2 flex justify-between items-center border-[1px] border-gray-200 rounded-lg ; 
+    }
+    .delete{
+      @apply  bg-red-600 p-2 rounded-md text-white mx-2;
+    }
+    .edit{
+      @apply  bg-green-600 py-2 px-4 rounded-md text-white;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+  <main>
+    <section class="w-[450px] mx-auto mt-[5rem]">
+      <h2 class="text-3xl text-cyan-500 font-semibold justify-center text-center"> My Task list App </h2>
+      <div class="max-w-xl mx-auto  border-gray-200 bg-transparent pt-3 focus-within:border-blue-600">
+
+        <form id="task-form" class="pt-6 flex justify-between">
+          <label for="UserEmail"
+            class="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-8 focus-within:border-blue-600">
+            <input type="text" id="task-input" placeholder="Creact a Task"
+              class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-3xl" />
+
+            <span
+              class="absolute start-0 top-0 bg-translate-y-1/2 text-2xl text-gray-600 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-xl peer-focus:top-2 peer-focus:text-xl">
+              Create a Task
+            </span>
+          </label>
+
+          <!-- btn -->
+
+
+          <div>
+            <a class="group relative inline-block text-sm font-medium text-indigo-600 focus:outline-none focus:ring active:text-indigo-500 mt-4"
+              href="#" id="submit" type="submit">
+              <span
+                class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-indigo-600 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
+
+              <span class="relative block border border-current bg-white px-6 py-3"> Add Task </span>
+            </a>
+
+          </div>
+
+
+        </form>
+      </div>
+    </section>
+
+    <section class="w-[450px] mx-auto mt-10">
+      <h3 class="font-semibold text-lg border-b border-gray-300 pu-4 mb-6">Task Ongoing</h3>
+
+      <div id="task-list" class="space-y-4">
+
+        <!-- <div class="tasks">
+          <input type="text" value="text" class="w-[70%] px-2">
+
+          <div class="w-[%] ">
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
